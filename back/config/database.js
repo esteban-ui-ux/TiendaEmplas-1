@@ -1,12 +1,15 @@
-const mongoose = require('mongoose');
+const mongoose=require("mongoose");
 
-const connecDatabase = () => {
+//método que conecta bd
+const connectDatabase = () => {
     mongoose.connect(process.env.DB_LOCAL_URI, {
-        useNewUrlParser:true,
+        useNewUrlParser: true,
         useUnifiedTopology: true
-    }).then(con => {
-        console.log(`Base de datos conectada con el servidor:  ${con.connection.host}`)
+    }).then(con =>{
+        console.log(`La base de datos mongo esta adecuadamente conectada con el servidor: ${con.connection.host}`)
+    }).catch(con =>{
+        console.log(`La conectividad con la base de datos Emplas fue fallida`)
     })
 }
 
-module.exports=connecDatabase;
+module.exports=connectDatabase;

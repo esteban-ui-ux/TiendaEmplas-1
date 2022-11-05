@@ -41,12 +41,7 @@ const productosSchema =mongoose.Schema({
                 "Ropa",
                 "Calzado",
                 "Decoracion",
-                "Mascotas",
-                "Deportes",
-                "Cuidado e Higiene",
-                "Juguetes",
-                "Material Educativo",
-                "Miscelanea"
+                "Hogar"
             ]
         }
     },
@@ -73,12 +68,18 @@ const productosSchema =mongoose.Schema({
             type:String,
             required:true
         },
-        fechaComentario:{
-            type:Date,
+        comentario:{
+            type:String,
             required:true,
-            default:Date.now
         }
     }],
+
+    user:{
+        type: mongoose.Schema.ObjectId,
+        ref:'User',
+        required: true
+    },
+
     fechaCreacion:{
         type:Date,
         default:Date.now

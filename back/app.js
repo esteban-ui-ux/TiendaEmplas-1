@@ -1,10 +1,20 @@
-const express = require("express");
+const express=require("express");
 const app = express();
+const errorMiddleware= require("./middleware/errors")
+const cookieParser= require("cookie-parser")
 
+//Uso de constantes importadas
 app.use(express.json());
+app.use(cookieParser());
 
-const productos = require("./routes/products");
+//Importar rutas
+const productos=require("./routes/products")
+const usuarios=require("./routes/auth")
 
-app.use("api", productos); //  Se indica que la 1ra  ruta es Productos
+app.use('/api',productos) //Sujeto a decision (ruta del navegador)
+app.use('/api',usuarios)
 
-module.exports = app;
+//MiddleWares para manejar errores
+app.use(errorMiddleware)
+
+module.exports=app

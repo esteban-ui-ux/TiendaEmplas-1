@@ -1,2 +1,2 @@
-# TiendaEmplas
-Proyecto ciclo 4 Mintic
+# TiendaVirtual-1
+proyecto ciclo 4 (2022 UDEA)

@@ -1,8 +1,8 @@
 {
-  "name": "ecommerce",
+  "name": "tiendavirtual",
   "version": "1.0.0",
-  "description": "Tienda virtual",
-  "main": "index.js",
+  "description": "Tienda virtual de productos con materia prima reciclada",
+  "main": "server.js",
   "scripts": {
     "start": "node back/server.js",
     "dev": "SET NODE_ENV=DEVELOPMENT& nodemon back/server",
@@ -10,18 +10,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/esteban-ui-ux/ecommerce.git"
+    "url": "git+https://github.com/ProyectosUDEA/TiendaVirtual.git"
   },
-  "author": "Esteban Chitiva PENTAGONO",
+  "author": "Pentagono",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/esteban-ui-ux/ecommerce/issues"
+    "url": "https://github.com/ProyectosUDEA/TiendaVirtual/issues"
   },
-  "homepage": "https://github.com/esteban-ui-ux/ecommerce#readme",
+  "homepage": "https://github.com/ProyectosUDEA/TiendaVirtual#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "mongoose": "^6.6.5"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.6.5",
+    "node-fetch": "^3.2.10",
+    "nodemailer": "^6.8.0",
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
